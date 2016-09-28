@@ -1,0 +1,23 @@
+{
+  "name": "github-desktop-modifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "electron": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardorisch/github-desktop-modifier.git"
+  },
+  "author": "leonardorisch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardorisch/github-desktop-modifier/issues"
+  },
+  "homepage": "https://github.com/leonardorisch/github-desktop-modifier#readme"
+}

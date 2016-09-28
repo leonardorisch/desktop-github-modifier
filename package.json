@@ -1,5 +1,5 @@
 {
-  "name": "github-desktop-modifier",
+  "name": "desktop-github-modifier",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -16,7 +16,7 @@
   "author": "leonardorisch",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leonardorisch/github-desktop-modifier/issues"
+    "url": "https://github.com/leonardorisch/desktop-github-modifier/issues"
   },
-  "homepage": "https://github.com/leonardorisch/github-desktop-modifier#readme"
+  "homepage": "https://github.com/leonardorisch/desktop-github-modifier#readme"
 }

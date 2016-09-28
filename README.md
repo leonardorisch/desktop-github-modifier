@@ -1,1 +1,1 @@
-# github-desktop-modifier
+# desktop-github-modifier

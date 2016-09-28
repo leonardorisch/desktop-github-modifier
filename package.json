@@ -2,11 +2,10 @@
   "name": "github-desktop-modifier",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
   "dependencies": {
     "electron": "^1.4.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

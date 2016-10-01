@@ -6,7 +6,9 @@
   "dependencies": {
     "electron": "^1.4.1",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/leonardorisch/desktop-github-modifier/issues"
   },
-  "homepage": "https://github.com/leonardorisch/desktop-github-modifier#readme"
+  "homepage": "https://github.com/leonardorisch/desktop-github-modifier#readme",
+  "devDependencies": {
+    "redux-devtools": "^3.3.1"
+  }
 }

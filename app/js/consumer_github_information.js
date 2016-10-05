@@ -14,15 +14,15 @@ var Buttons = React.createClass({
         <input type="text" name="username" onChange={this.handleChange} id="js-load-username"/>
         <button className="btn btn-danger"
           onClick={() => ReactDOM.render(<UserBox url={"https://api.github.com/users/"+ this.state.username} />,
-           document.getElementById('example'))
+        document.getElementById('content'))
          }
          id="js-load-config"> Carregar configs </button>
       </div>
     )
   }
-});
+}),
 
-var UserBox = React.createClass({
+UserBox = React.createClass({
   getInitialState : function() {
     return {
       username: ''
@@ -31,7 +31,7 @@ var UserBox = React.createClass({
 
   componentDidMount : function() {
     this.serverRequest = $.get(this.props.url, function (result) {
-      this.setState(this.getUserInformationHash(result));
+      this.setState(result);
     }.bind(this));
   },
 
@@ -39,49 +39,49 @@ var UserBox = React.createClass({
     this.serverRequest.abort();
   },
 
-  getUserInformationHash : function(apiResponse){
-    return {
-      username: apiResponse['login'],
-      avatar_url: apiResponse['avatar_url'],
-      name: apiResponse['name'],
-      company: apiResponse['company'],
-      repos: apiResponse['reposUrl']
-    }
-  },
-
   render : function() {
-    console.log(this.state)
     return (
-      <div className="userBox row">
-        <UserName username={this.state.username} />
+      <div className="userBox">
+        <UserInformation apiResponse={this.state} />
       </div>
     );
   }
-});
+}),
 
-var UserName = React.createClass({
-  getInitialState : function() {
-    console.log(this)
-    return ({
-      username: '',
-      avatar: ''
-    })
-  },
-
+UserInformation = React.createClass({
   render : function() {
+    console.log(this.props.apiResponse)
     return (
-      <div>
-        <div className="userName col-xs-6">
-          {this.props.username}
-        </div>
-        <div className="user-avatar col-xs-6">
-             'teste'
-        </div>
+      <div className="row center">
+        <UserName username={this.props.apiResponse.login}/>
+        <UserAvatar avatar={this.props.apiResponse.avatar_url}/>
       </div>
     );
+  }
+}),
+
+UserName = React.createClass({
+  render : function(){
+    return(
+      <div className="user-name col-xs-6">
+        {this.props.username}
+      </div>
+    )
+  }
+}),
+
+UserAvatar = React.createClass({
+  render : function(){
+    return(
+      <div className="user-avatar col-xs-6">
+        <a href="#" className="thumbnail">
+          <img src={this.props.avatar} className="avatar"/>
+        </a>
+      </div>
+    )
   }
 })
 
 ReactDOM.render(
-  <Buttons />, document.getElementById('example')
+  <Buttons />, document.getElementById('content')
 );

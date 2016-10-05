@@ -1,0 +1,8 @@
+#content {
+  width: 90%;
+  min-width: 200px;
+
+  .username {
+    width: 200px;
+  }
+}
